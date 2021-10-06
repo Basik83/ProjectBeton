@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista betonów</title>
+</head>
+<body>
+<h1>Betony</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nazwa</th>
+        <th>Kolor</th>
+        <th>Cena</th>
+    </tr>
+    <tr th:each ="beton: ${betony}">
+        <td th:text="${beton.id}"></td>
+        <td th:text="${beton.name}"></td>
+        <td th:text="${beton.color}"></td>
+        <td th:text="${beton.price}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
